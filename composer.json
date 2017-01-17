@@ -1,6 +1,6 @@
 {
-    "name": "alexandr/sms-club",
-    "description": "Allo",
+    "name": "alexandr-kharchenko/sms-club",
+    "description": "Class for work with https://smsclub.mobi/ API. HTTP protocol.",
     "authors": [
         {
             "name": "Alexandr Kharchenko",
