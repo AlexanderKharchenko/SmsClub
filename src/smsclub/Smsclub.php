@@ -48,7 +48,7 @@ class SmsClubClient
 
 
     /**
-     * Smsclub constructor.
+     * smsclub constructor.
      *
      */
     public function __construct()
