@@ -19,7 +19,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Smsсlub\\": "src/smsclub"
+      "SmsClub\\": "src/"
     }
   }
 }

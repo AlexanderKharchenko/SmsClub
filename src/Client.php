@@ -1,6 +1,6 @@
 <?php
 
-namespace Smsclub;
+namespace SmsClub;
 
 class Client
 {
