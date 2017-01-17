@@ -1,5 +1,9 @@
 Клиент для работы с API сервиса [smsclub](https://smsclub.mobi/)
 
+[![Total Downloads](https://poser.pugx.org/alexandr-kharchenko/sms-club/downloads?format=flat-square)](https://packagist.org/packages/alexandr-kharchenko/sms-club)
+[![License](https://poser.pugx.org/alexandr-kharchenko/sms-club/license?format=flat-square)](https://packagist.org/packages/alexandr-kharchenko/sms-club)
+[![Monthly Downloads](https://poser.pugx.org/alexandr-kharchenko/sms-club/d/monthly?format=flat-square)](https://packagist.org/packages/alexandr-kharchenko/sms-club)
+
 ## Установка
 
 ### Через composer:
