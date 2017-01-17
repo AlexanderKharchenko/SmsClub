@@ -4,6 +4,7 @@
   "homepage": "https://github.com/AlexandrKharchenko/SmsClub",
   "license": "MIT",
   "version": "1.0.0",
+  "minimum-stability" : "dev",
   "authors": [
     {
       "name": "Alexandr Kharchenko",
@@ -17,8 +18,8 @@
 
   },
   "autoload": {
-    "psr-4": {
-      "SmsClub\\": "src/"
+    "psr-0": {
+      "SmsClub": "src/"
     }
   }
 }
