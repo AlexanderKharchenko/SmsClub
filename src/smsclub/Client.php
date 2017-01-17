@@ -2,7 +2,7 @@
 
 namespace Smsclub;
 
-class SmsClubClient
+class Client
 {
 
     /**
