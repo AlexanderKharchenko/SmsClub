@@ -1,20 +1,25 @@
 {
-    "name": "alexandr-kharchenko/sms-club",
-    "description": "Class for work with https://smsclub.mobi/ API. HTTP protocol.",
-    "authors": [
-        {
-            "name": "Alexandr Kharchenko",
-            "email": "alexsot1545@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-      "php": ">=5.6.0"
-    },
-    "autoload": {
-      "psr-0": {
-        "SmsClub": "src/"
-      }
+  "name": "alexandr-kharchenko/sms-club",
+  "description": "Class for work with https://smsclub.mobi/ API. HTTP protocol.",
+  "homepage": "https://github.com/AlexandrKharchenko/SmsClub",
+  "license": "MIT",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Alexandr Kharchenko",
+      "email": "alexsot1545@gmail.com",
+      "role": "Developer"
 
     }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.6.0"
+
+  },
+  "autoload": {
+    "psr-4": {
+      "SmsClub\\": "src/"
+    }
+  }
 }
