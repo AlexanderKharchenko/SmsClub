@@ -79,7 +79,7 @@ class Client
             throw new  SmsClubException(NULL, 101);
 
         if (isset($params['from']))
-            $this->FROM = $params['102'];
+            $this->FROM = $params['from'];
         else
             throw new  SmsClubException(NULL, 101);
 
