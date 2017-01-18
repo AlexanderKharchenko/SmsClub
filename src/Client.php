@@ -115,7 +115,7 @@ class Client
      */
     public function setMessage($message)
     {
-        $this->message = urlencode(trim($message));
+        $this->message = trim($message);
 
         return $this;
     }
