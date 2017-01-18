@@ -23,7 +23,12 @@ $ composer require alexandr-kharchenko/sms-club
 # Быстрый старт
 Создать клиеент.
 ```php
-    $client = new \SmsClub\Client();
+    $client = new \SmsClub\Client([
+      'token'       => 'token',
+      'username'    => 'username',
+      'login'       => 'login',
+      'from'        => 'from'
+    ]);
 ```
 
 ## Отправка сообщений
