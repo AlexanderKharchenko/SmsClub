@@ -1,4 +1,4 @@
-Клиент для работы с API сервиса [smsclub](https://smsclub.mobi/)
+Клиент для работы с API сервиса [https://smsclub.mobi](https://smsclub.mobi/)
 
 [![Total Downloads](https://poser.pugx.org/alexandr-kharchenko/sms-club/downloads?format=flat-square)](https://packagist.org/packages/alexandr-kharchenko/sms-club)
 [![License](https://poser.pugx.org/alexandr-kharchenko/sms-club/license?format=flat-square)](https://packagist.org/packages/alexandr-kharchenko/sms-club)
