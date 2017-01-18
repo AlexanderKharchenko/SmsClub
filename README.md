@@ -26,7 +26,6 @@ $ composer require alexandr-kharchenko/sms-club
     $client = new \SmsClub\Client([
       'token'       => 'token',
       'username'    => 'username',
-      'login'       => 'login',
       'from'        => 'from'
     ]);
 ```
