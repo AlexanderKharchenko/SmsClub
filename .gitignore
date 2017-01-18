@@ -1,9 +1,8 @@
-
 .idea/workspace.xml
 
-.idea/vcs.xml
+.idea/copyright/*
 
-.idea/copyright/profiles_settings.xml
+.idea/vcs.xml
 
 .idea/deployment.xml
 
@@ -14,3 +13,5 @@
 .idea/phing.xml
 
 .idea/SmsClub.iml
+
+
