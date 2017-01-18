@@ -24,9 +24,9 @@ $ composer require alexandr-kharchenko/sms-club
 Создать клиеент.
 ```php
     $client = new \SmsClub\Client([
-      'token'       => 'token',
-      'username'    => 'username',
-      'from'        => 'from'
+      'token'       => 'token', // Токен учетной записи пользователя (который можно найти в профиле пользователя);
+      'username'    => 'username', // Логин учетной записи пользователя;
+      'from'        => 'from' // Альфа-имя, от которого идет отправка (до 11 английских символов, цифры, пробел);
     ]);
 ```
 
