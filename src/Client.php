@@ -1,6 +1,15 @@
 <?php
+/**
+ * Copyright (c) 2017. Email: alexsot1545@gmail.com GitHub: https://github.com/AlexandrKharchenko
+ */
 
 namespace SmsClub;
+
+
+/**
+ * Class Client
+ * @package SmsClub
+ */
 
 class Client
 {
@@ -12,15 +21,15 @@ class Client
     /**
      * Токен учетной записи пользователя (который можно найти в профиле пользователя);
      */
-    const TOKEN = "";
+    private $TOKEN = "";
     /**
      * логин учетной записи пользователя;
      */
-    const USERNAME = "";
+    private $USERNAME = "";
     /**
      * Альфа-имя, от которого идет отправка (11 английских символов, цифры, пробел);
      */
-    const FROM = "";
+    private $FROM = "";
     /**
      * Шаблон
      */
@@ -50,9 +59,30 @@ class Client
     /**
      * smsclub constructor.
      *
+     * @param array $params
+     *
+     * @throws SmsClubException
      */
-    public function __construct()
+    public function __construct($params = [])
     {
+        if (isset($params['charset']))
+            $this->charset = $params['charset'];
+
+        if (isset($params['token']))
+            $this->TOKEN = $params['token'];
+        else
+            throw new  SmsClubException(NULL, 100);
+
+        if (isset($params['username']))
+            $this->USERNAME = $params['username'];
+        else
+            throw new  SmsClubException(NULL, 101);
+
+        if (isset($params['from']))
+            $this->FROM = $params['102'];
+        else
+            throw new  SmsClubException(NULL, 101);
+
 
     }
 
@@ -100,15 +130,16 @@ class Client
         if (empty(trim($this->message)))
             return ['error' => 'Message is empty'];
 
-        $message = iconv('utf-8', 'windows-1251', $this->message);
+        $message = iconv($this->charset, 'windows-1251', $this->message);
         $requestParams = [
-            'username' => self::USERNAME,
-            'token'    => self::TOKEN,
-            'from'     => self::FROM,
+            'username' => $this->USERNAME,
+            'token'    => $this->TOKEN,
+            'from'     => $this->FROM,
             'to'       => implode(';', $this->recipients),
             'text'     => $message,
         ];
         $response = $this->_request('', $requestParams);
+        $this->_clearData();
 
         return $this->response($response);
     }
@@ -124,8 +155,8 @@ class Client
     public function getStatus(array $smsIds)
     {
         $requestParams = [
-            'username' => self::USERNAME,
-            'token'    => self::TOKEN,
+            'username' => $this->USERNAME,
+            'token'    => $this->TOKEN,
             'smscid'   => implode(';', $smsIds),
 
         ];
@@ -142,8 +173,8 @@ class Client
     public function getBalance()
     {
         $requestParams = [
-            'username' => self::USERNAME,
-            'token'    => self::TOKEN,
+            'username' => $this->USERNAME,
+            'token'    => $this->TOKEN,
         ];
 
         // TODO: preg_match_all - определить валюту
@@ -168,7 +199,7 @@ class Client
      *
      * @return mixed
      */
-    public function _request($method, $params)
+    private function _request($method, $params)
     {
 
         try {
@@ -207,7 +238,7 @@ class Client
      *
      * @return array
      */
-    public function response($str, $method = '')
+    private function response($str, $method = '')
     {
         preg_match_all(self::PATTERN_RESPONSE, $str, $smsid, PREG_PATTERN_ORDER);
 
@@ -248,6 +279,16 @@ class Client
             ];
 
         }
+    }
+
+
+    /**
+     * Очищает сообщение и получателей
+     */
+    private function _clearData()
+    {
+        $this->message = NULL;
+        $this->recipients = [];
     }
 
 
