@@ -9,14 +9,14 @@
 ### Через composer:
 
 ```bash
-$ composer require alexandr-kharchenko/sms-club
+$ composer require alexander-kharchenko/sms-club
 ```
 
 или добавить
 
 ```json
 "require" : {
-    "alexandr-kharchenko/sms-club": "dev-master"
+    "alexander-kharchenko/sms-club": "dev-master"
 }
 ```
 
